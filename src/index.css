@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+  --color-green1: #4caf50;
+  --color-green2: #45a049;
+  --color-green3: #388e3c;
+  --color-green3: #388e3c;
+  --color-yellow1: #ffd166;
+  --color-yellow2: #ffb833;
+  --color-brown1: #3b2f2f;
+  --color-red1: #ff6f61;
+  --color-white1: #f5f5f5;
+  --color-white2: #e8f5e9;
+  --color-deepgreen: #141514;
+
+  --default-font-family: "Nunito", sans-serif;
+}
