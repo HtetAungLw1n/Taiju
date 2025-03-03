@@ -20,6 +20,20 @@ const AuthForm = ({ header, button, form }) => {
             <div className="text-3xl font-semibold my-4">{header}</div>
 
             <Form className="flex flex-col py-4">
+              {form === "isSignIn" && (
+                <div className="my-2">
+                  <label htmlFor="name" className="text-xl block font-semibold">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    className="border-2 border-deepgreen p-2 rounded-lg bg-white2 w-full outline-none"
+                  />
+                </div>
+              )}
+
               <div className="my-2">
                 <label htmlFor="email" className="text-xl block font-semibold">
                   Email
@@ -94,6 +108,19 @@ const AuthForm = ({ header, button, form }) => {
             <div className="text-3xl font-semibold my-4">{header}</div>
 
             <Form className="flex flex-col py-4">
+              {form === "isSignIn" && (
+                <div className="my-2">
+                  <label htmlFor="name" className="text-xl block font-semibold">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    className="border-2 border-deepgreen p-2 rounded-lg bg-white2 w-full outline-none"
+                  />
+                </div>
+              )}
               <div className="my-2">
                 <label htmlFor="email" className="text-xl block font-semibold">
                   Email
