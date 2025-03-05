@@ -99,7 +99,7 @@ const AuthForm = ({ header, button, form }) => {
           className="w-2/3 object-cover object-left"
         />
 
-        <div className=" bg-green1 border-deepgreen rounded-l-2xl border-l-4 w-full p-4 px-8">
+        <div className="bg-greendark border-deepgreen rounded-l-2xl border-l-4 w-full p-4 px-8">
           <Link to={"/welcome"}>
             <FaArrowLeft className="w-6 h-6" />
           </Link>
@@ -117,7 +117,7 @@ const AuthForm = ({ header, button, form }) => {
                     type="text"
                     name="name"
                     id="name"
-                    className="border-2 border-deepgreen p-2 rounded-lg bg-white2 w-full outline-none"
+                    className="border-2 p-2 rounded-lg bg-white2 w-full outline-none"
                   />
                 </div>
               )}
@@ -129,7 +129,7 @@ const AuthForm = ({ header, button, form }) => {
                   type="text"
                   name="email"
                   id="email"
-                  className="border-2 border-deepgreen p-2 rounded-lg bg-white2 w-full outline-none"
+                  className="border-2 p-2 rounded-lg bg-white2 w-full outline-none"
                 />
               </div>
               <div className="my-2">
@@ -143,7 +143,7 @@ const AuthForm = ({ header, button, form }) => {
                   type="text"
                   name="password"
                   id="password"
-                  className="border-2 border-deepgreen p-2 rounded-lg bg-white2 w-full outline-none"
+                  className="border-2 p-2 rounded-lg bg-white2 w-full outline-none"
                 />
               </div>
 
@@ -161,12 +161,14 @@ const AuthForm = ({ header, button, form }) => {
                     </div>
                   )}
                   {form === "isLogin" && (
-                    <Link className="float-end">Forget Password ?</Link>
+                    <Link className="float-end hover:text-cream">
+                      Forget Password ?
+                    </Link>
                   )}
                 </div>
                 <button
                   type="submit"
-                  className="bg-white1 font-semibold mt-4 px-4 py-2 rounded-lg border-2 border-deepgreen block"
+                  className="bg-cream font-semibold mt-4 px-4 py-2 rounded-lg border-2 border-deepgreen block"
                 >
                   {button}
                 </button>
