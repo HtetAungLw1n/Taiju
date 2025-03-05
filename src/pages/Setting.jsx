@@ -1,9 +1,11 @@
 import React from "react";
 import profileImg from "../assets/welcome.png";
+import { Link } from "react-router-dom";
 
 const Setting = () => {
   return (
     <div className="md:w-[70%] bg-white1 p-8 md:px-96 md:py-20">
+      {/* name  */}
       <div className="flex gap-10 items-center">
         <img
           src={profileImg}
@@ -12,7 +14,7 @@ const Setting = () => {
         />
         <div>
           <div className="text-xl font-semibold">Htet Aung Lwin</div>
-          <div className="text-neutral-700">edit name</div>
+          <Link className="text-neutral-700">edit name</Link>
         </div>
       </div>
       <div className="my-10">
@@ -66,6 +68,13 @@ const Setting = () => {
           <label htmlFor="borderStyle" className="mr-4">
             Square
           </label>
+        </div>
+
+        {/* button  */}
+        <div className="flex flex-col mt-10 gap-4 md:w-1/2">
+          <button className="bg-cream border-2 rounded px-4 py-2">Save</button>
+          <button className="px-4 py-2">Change Password</button>
+          <button className="text-red-700 rounded px-4 py-2">Log Out</button>
         </div>
       </div>
       <div></div>
