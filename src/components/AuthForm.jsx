@@ -3,7 +3,7 @@ import image from "../assets/welcome.png";
 import { Form, Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 
-const AuthForm = ({ header, button, form }) => {
+const AuthForm = ({ header, button, form, method }) => {
   return (
     <section className="h-screen relative text-deepgreen">
       {/* this is small screen  */}
@@ -19,7 +19,7 @@ const AuthForm = ({ header, button, form }) => {
           <div>
             <div className="text-3xl font-semibold my-4">{header}</div>
 
-            <Form className="flex flex-col py-4">
+            <Form method={method} className="flex flex-col py-4">
               {form === "isSignIn" && (
                 <div className="my-2">
                   <label htmlFor="name" className="text-xl block font-semibold">
@@ -107,31 +107,33 @@ const AuthForm = ({ header, button, form }) => {
           <div className="h-[80%] flex flex-col justify-center">
             <div className="text-3xl font-semibold my-4">{header}</div>
 
-            <Form className="flex flex-col py-4">
+            <Form method={method} className="flex flex-col py-4">
+              <div className="my-2">
+                <label htmlFor="name" className="text-xl block font-semibold">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  className="border-2 p-2 rounded-lg bg-white2 w-full outline-none"
+                />
+              </div>
+
               {form === "isSignIn" && (
                 <div className="my-2">
-                  <label htmlFor="name" className="text-xl block font-semibold">
-                    Name
+                  <label
+                    htmlFor="email"
+                    className="text-xl block font-semibold"
+                  >
+                    Email
                   </label>
                   <input
                     type="text"
-                    name="name"
-                    id="name"
+                    name="email"
                     className="border-2 p-2 rounded-lg bg-white2 w-full outline-none"
                   />
                 </div>
               )}
-              <div className="my-2">
-                <label htmlFor="email" className="text-xl block font-semibold">
-                  Email
-                </label>
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  className="border-2 p-2 rounded-lg bg-white2 w-full outline-none"
-                />
-              </div>
               <div className="my-2">
                 <label
                   htmlFor="password"
@@ -142,7 +144,6 @@ const AuthForm = ({ header, button, form }) => {
                 <input
                   type="text"
                   name="password"
-                  id="password"
                   className="border-2 p-2 rounded-lg bg-white2 w-full outline-none"
                 />
               </div>
@@ -154,7 +155,6 @@ const AuthForm = ({ header, button, form }) => {
                       <input
                         type="checkbox"
                         name="term&conditions"
-                        id="term&conditions"
                         className="mr-2"
                       />
                       <label htmlFor="term&conditions">Term & conditions</label>

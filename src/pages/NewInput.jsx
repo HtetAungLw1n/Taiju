@@ -19,7 +19,7 @@ const NewInput = () => {
 
     try {
       const response = await fetch(
-        "https://taiju-2025-default-rtdb.firebaseio.com/username.json",
+        "https://taiju-2025-default-rtdb.firebaseio.com/hurri.json",
         {
           method: "POST",
           headers: {
