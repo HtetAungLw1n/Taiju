@@ -83,7 +83,7 @@ const Setting = () => {
           <button className="py-2 text-start">Change Password</button>
           <button
             onClick={logoutHandler}
-            className="text-red-700 rounded py-2 text-start"
+            className="text-red-700 rounded py-2 text-start cursor-pointer"
           >
             Log Out
           </button>

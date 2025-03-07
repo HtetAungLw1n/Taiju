@@ -13,7 +13,7 @@ const Home = () => {
       {Object.entries(links)
         .slice(1)
         .map(([key, value]) => (
-          <CurrentLink key={key} value={value} />
+          <CurrentLink key={key} value={value} id={key} />
         ))}
     </div>
   );
