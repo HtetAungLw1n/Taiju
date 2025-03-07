@@ -1,8 +1,15 @@
 import React from "react";
 import profileImg from "../assets/welcome.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Setting = () => {
+  //this is for logout
+  const navigate = useNavigate();
+  const logoutHandler = () => {
+    localStorage.removeItem("token");
+    navigate("/welcome");
+  };
+
   return (
     <div className="md:w-[70%] bg-white1 p-8 md:px-96 md:py-20">
       {/* name  */}
@@ -73,8 +80,13 @@ const Setting = () => {
         {/* button  */}
         <div className="flex flex-col mt-10 gap-4 md:w-1/2">
           <button className="bg-cream border-2 rounded px-4 py-2">Save</button>
-          <button className="px-4 py-2">Change Password</button>
-          <button className="text-red-700 rounded px-4 py-2">Log Out</button>
+          <button className="py-2 text-start">Change Password</button>
+          <button
+            onClick={logoutHandler}
+            className="text-red-700 rounded py-2 text-start"
+          >
+            Log Out
+          </button>
         </div>
       </div>
       <div></div>
