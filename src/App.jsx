@@ -3,7 +3,7 @@ import Main from "./layout/Main";
 import Login, { action as loginAction } from "./pages/Login";
 import Signin, { action as signinAction } from "./pages/Signin";
 import Welcome from "./pages/Welcome";
-import Home from "./pages/Home";
+import Home, { loader as linkLoader } from "./pages/Home";
 import Setting from "./pages/Setting";
 import NewInput from "./pages/NewInput";
 
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Main />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <Home />, loader: linkLoader },
       { path: "/setting", element: <Setting /> },
       { path: "/newInput", element: <NewInput /> },
     ],

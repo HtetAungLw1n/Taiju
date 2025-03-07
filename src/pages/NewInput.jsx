@@ -17,9 +17,11 @@ const NewInput = () => {
     setIsSubmittin(true);
     const data = { name: newLinkName, link: newLink };
 
+    const token = localStorage.getItem("token");
+
     try {
       const response = await fetch(
-        "https://taiju-2025-default-rtdb.firebaseio.com/hurri.json",
+        `https://taiju-2025-default-rtdb.firebaseio.com/${token}.json`,
         {
           method: "POST",
           headers: {

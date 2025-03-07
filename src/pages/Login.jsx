@@ -33,6 +33,7 @@ export const action = async ({ request }) => {
     const userInfo = Object.values(result)[0];
 
     if (userInfo?.password && password === userInfo.password) {
+      localStorage.setItem("token", name);
       return redirect("/");
     }
   }
