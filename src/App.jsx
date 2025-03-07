@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Main from "./layout/Main";
+import Main, { loader as authLoader } from "./layout/Main";
 import Login, { action as loginAction } from "./pages/Login";
 import Signin, { action as signinAction } from "./pages/Signin";
 import Welcome from "./pages/Welcome";
@@ -11,6 +11,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    loader: authLoader,
     children: [
       { index: true, element: <Home />, loader: linkLoader },
       { path: "/setting", element: <Setting /> },
