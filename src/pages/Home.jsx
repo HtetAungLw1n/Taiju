@@ -7,7 +7,7 @@ const Home = () => {
   const links = useLoaderData();
 
   return (
-    <div className="md:w-[70%] bg-white1 px-4 md:px-96 md:py-10">
+    <div className="md:w-[70%] px-4 md:px-96 md:py-10">
       <UserInput />
 
       {Object.entries(links)

@@ -6,6 +6,7 @@ import Welcome from "./pages/Welcome";
 import Home, { loader as linkLoader } from "./pages/Home";
 import Setting from "./pages/Setting";
 import NewInput from "./pages/NewInput";
+import Edit, { loader as gettingPreviousDataLoader } from "./pages/Edit";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
       { index: true, element: <Home />, loader: linkLoader },
       { path: "/setting", element: <Setting /> },
       { path: "/newInput", element: <NewInput /> },
+      {
+        path: "/edit/:id",
+        element: <Edit />,
+        loader: gettingPreviousDataLoader,
+      },
     ],
   },
   { path: "/welcome", element: <Welcome /> },

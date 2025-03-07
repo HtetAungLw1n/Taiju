@@ -25,7 +25,7 @@ const CurrentLink = ({ id, value }) => {
         <Link className="text-neutral-700">{value.link}</Link>
       </div>
       <div className="flex flex-col gap-2">
-        <Link>
+        <Link to={`/edit/${id}`}>
           <BiPencil className="text-lg" />
         </Link>
         <button onClick={deleteBtn} className="cursor-pointer">
