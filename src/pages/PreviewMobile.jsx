@@ -1,9 +1,12 @@
 import React from "react";
 import PreviewSection from "../components/PreviewSection";
+import { useLoaderData } from "react-router-dom";
 
-const Preview = ({ links }) => {
+const PreviewMobile = () => {
+  const links = useLoaderData();
+
   return (
-    <div className="hidden md:block md:w-[30%] ">
+    <div className="mx-auto mt-20">
       <div className="flex items-center justify-center h-full shadow">
         <div className="relative w-80 h-[600px] bg-night rounded-[50px] shadow-2xl  flex flex-col items-center p-2">
           <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-5 bg-night rounded-xl"></div>
@@ -18,4 +21,15 @@ const Preview = ({ links }) => {
   );
 };
 
-export default Preview;
+export default PreviewMobile;
+
+export const loader = async () => {
+  const token = localStorage.getItem("token");
+
+  const response = await fetch(
+    `https://taiju-2025-default-rtdb.firebaseio.com/${token}.json`
+  );
+
+  const result = await response.json();
+  return result;
+};

@@ -20,10 +20,10 @@ const CurrentLink = ({ id, value }) => {
 
   return (
     <div className="bg-cream border-2 border-night my-4 rounded-lg text-white1 p-4 flex justify-between items-center shadow">
-      <div>
+      <article className="break-all w-[80%]">
         <div className="md:text-xl">{value.name}</div>
         <Link className="text-neutral-700">{value.link}</Link>
-      </div>
+      </article>
       <div className="flex flex-col gap-2">
         <Link to={`/edit/${id}`}>
           <BiPencil className="text-lg" />

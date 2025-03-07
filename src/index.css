@@ -10,3 +10,13 @@
 
   --default-font-family: "Nunito", sans-serif;
 }
+
+/* hide scroll bar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* hide scroll bar */

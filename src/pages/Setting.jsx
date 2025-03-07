@@ -10,23 +10,21 @@ const Setting = () => {
     navigate("/welcome");
   };
 
+  // this is getting name
+  const name = localStorage.getItem("token");
+
   return (
     <div className="md:w-[70%] bg-white1 p-8 md:px-96 md:py-20">
       {/* name  */}
       <div className="flex gap-10 items-center">
-        <img
-          src={profileImg}
-          alt="img"
-          className="w-20 h-20 object-cover rounded-full"
-        />
         <div>
-          <div className="text-xl font-semibold">Htet Aung Lwin</div>
-          <Link className="text-neutral-700">edit name</Link>
+          <div className="text-xl font-semibold">{name}</div>
+          {/* <Link className="text-neutral-700">edit name</Link> */}
         </div>
       </div>
       <div className="my-10">
         {/* bgColor  */}
-        <div className="mb-8 flex items-center">
+        {/* <div className="mb-8 flex items-center">
           <div className="w-44">
             <label htmlFor="bgColor" className="mr-10">
               Background Color
@@ -39,10 +37,10 @@ const Setting = () => {
             id="bgColor"
             className="h-10 w-10"
           />
-        </div>
+        </div> */}
 
         {/* borderColor  */}
-        <div className="mb-8 flex items-center">
+        {/* <div className="mb-8 flex items-center">
           <div className="w-44">
             <label htmlFor="borderColor">Border Color</label>
             <div className="text-neutral-700">#kfldgjl</div>
@@ -53,10 +51,10 @@ const Setting = () => {
             id="borderColor"
             className="h-10 w-10"
           />
-        </div>
+        </div> */}
 
         {/* border style  */}
-        <div>
+        {/* <div>
           <div className="mb-2">Border Style</div>
           <input
             type="radio"
@@ -75,12 +73,12 @@ const Setting = () => {
           <label htmlFor="borderStyle" className="mr-4">
             Square
           </label>
-        </div>
+        </div> */}
 
         {/* button  */}
         <div className="flex flex-col mt-10 gap-4 md:w-1/2">
-          <button className="bg-cream border-2 rounded px-4 py-2">Save</button>
-          <button className="py-2 text-start">Change Password</button>
+          {/* <button className="bg-cream border-2 rounded px-4 py-2">Save</button> */}
+          {/* <button className="py-2 text-start">Change Password</button> */}
           <button
             onClick={logoutHandler}
             className="text-red-700 rounded py-2 text-start cursor-pointer"
@@ -89,7 +87,6 @@ const Setting = () => {
           </button>
         </div>
       </div>
-      <div></div>
     </div>
   );
 };

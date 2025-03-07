@@ -1,16 +1,18 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Preview from "../pages/Preview";
-import { Outlet, redirect } from "react-router-dom";
+import { Outlet, redirect, useLoaderData } from "react-router-dom";
 
 const Main = () => {
+  const links = useLoaderData();
+
   return (
     <>
       <section className="h-screen flex flex-col">
         <Navbar />
         <div className="bg-greenlight md:flex flex-1">
           <Outlet />
-          <Preview />
+          <Preview links={links} />
         </div>
       </section>
     </>
@@ -26,6 +28,10 @@ export const loader = async () => {
   if (!token) {
     return redirect("/welcome");
   }
+  const response = await fetch(
+    `https://taiju-2025-default-rtdb.firebaseio.com/${token}.json`
+  );
 
-  return null;
+  const result = await response.json();
+  return result;
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { IoSettingsOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,17 +9,22 @@ const Navbar = () => {
       <NavLink to={"/"} className="text-xl font-semibold md:text-2xl">
         Taiju
       </NavLink>
-      <button className="md:hidden bg-greenlight text-night border text-sm  px-2 py-1 rounded shadow">
-        Preview
-      </button>
-      <motion.a
-        href={"/setting"}
-        className="hidden md:block"
-        whileHover={{ rotate: 45 }}
-        whileTap={{ rotate: -45 }}
-      >
-        <IoSettingsOutline className="text-2xl" />
-      </motion.a>
+      <div className="flex items-center gap-4">
+        <Link
+          to={"/previewMobile"}
+          className="md:hidden bg-greenlight text-night border text-sm  px-2 py-1 rounded shadow"
+        >
+          Preview
+        </Link>
+        <motion.a
+          href={"/setting"}
+          className="md:block"
+          whileHover={{ rotate: 45 }}
+          whileTap={{ rotate: -45 }}
+        >
+          <IoSettingsOutline className="text-2xl" />
+        </motion.a>
+      </div>
     </section>
   );
 };

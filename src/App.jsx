@@ -7,6 +7,9 @@ import Home, { loader as linkLoader } from "./pages/Home";
 import Setting from "./pages/Setting";
 import NewInput from "./pages/NewInput";
 import Edit, { loader as gettingPreviousDataLoader } from "./pages/Edit";
+import PreviewMobile, {
+  loader as previewMobileLoader,
+} from "./pages/PreviewMobile";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +20,11 @@ const router = createBrowserRouter([
       { index: true, element: <Home />, loader: linkLoader },
       { path: "/setting", element: <Setting /> },
       { path: "/newInput", element: <NewInput /> },
+      {
+        path: "/previewMobile",
+        element: <PreviewMobile />,
+        loader: previewMobileLoader,
+      },
       {
         path: "/edit/:id",
         element: <Edit />,
