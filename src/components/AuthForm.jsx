@@ -32,7 +32,7 @@ const AuthForm = ({ header, button, form, method }) => {
                 />
               </div>
 
-              {form === "isSignIn" && (
+              {form === "issignup" && (
                 <div className="my-2">
                   <label
                     htmlFor="email"
@@ -56,7 +56,7 @@ const AuthForm = ({ header, button, form, method }) => {
                   Password
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   name="password"
                   id="password"
                   className="border-2 border-deepgreen p-2 rounded-lg bg-white2 w-full outline-none"
@@ -65,7 +65,7 @@ const AuthForm = ({ header, button, form, method }) => {
 
               <div className="my-4">
                 <div>
-                  {form === "isSignIn" && (
+                  {form === "issignup" && (
                     <div>
                       <input
                         type="checkbox"
@@ -122,7 +122,7 @@ const AuthForm = ({ header, button, form, method }) => {
                 />
               </div>
 
-              {form === "isSignIn" && (
+              {form === "issignup" && (
                 <div className="my-2">
                   <label
                     htmlFor="email"
@@ -145,7 +145,7 @@ const AuthForm = ({ header, button, form, method }) => {
                   Password
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   name="password"
                   className="border-2 p-2 rounded-lg bg-white2 w-full outline-none"
                 />
@@ -153,7 +153,7 @@ const AuthForm = ({ header, button, form, method }) => {
 
               <div className="my-4">
                 <div>
-                  {form === "isSignIn" && (
+                  {form === "issignup" && (
                     <div>
                       <input
                         type="checkbox"

@@ -1,25 +1,25 @@
 import React from "react";
 import AuthForm from "../components/AuthForm";
+import { redirect } from "react-router-dom";
 
-const Signin = () => {
+const Signup = () => {
   return (
     <>
       <AuthForm
-        form={"isSignIn"}
+        form={"issignup"}
         header={"Create your own tree !"}
-        button={"Sign In"}
+        button={"Sign Up"}
         method={"POST"}
       />
     </>
   );
 };
 
-export default Signin;
+export default Signup;
 
 export const action = async ({ request }) => {
   const reqData = await request.formData();
   const name = reqData.get("name");
-  console.log(email);
 
   const userData = {
     email: reqData.get("email"),
@@ -40,4 +40,6 @@ export const action = async ({ request }) => {
   if (!response.ok) {
     // error page
   }
+
+  return redirect("/login");
 };

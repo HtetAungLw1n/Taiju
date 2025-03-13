@@ -24,10 +24,10 @@ const Welcome = () => {
               Login
             </Link>
             <Link
-              to={"/signin"}
+              to={"/signup"}
               className="bg-cream text-center w-[70%] py-3 rounded-xl border-2 border-deepgreen shadow-lg font-semibold"
             >
-              Sign In
+              Sign Up
             </Link>
           </div>
         </div>
@@ -55,10 +55,10 @@ const Welcome = () => {
               Login
             </Link>
             <Link
-              to={"/signin"}
+              to={"/signup"}
               className="bg-cream text-center w-[70%] py-3 rounded-xl border-2 shadow-lg font-semibold hover:bg-white1 transition duration-200"
             >
-              Sign In
+              Sign Up
             </Link>
           </div>
         </div>
